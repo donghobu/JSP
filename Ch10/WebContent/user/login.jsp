@@ -8,7 +8,7 @@
 	
 	if(uid != null) {
 		response.sendRedirect("./loginSuccess.jsp");
-		return; // 여기서 login.jsp 프로그램 종료
+		/*return;*/ // 여기서 login.jsp 프로그램 종료
 	}
 	
 	
