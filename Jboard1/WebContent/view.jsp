@@ -12,7 +12,7 @@
 
 	if(mb == null){
 		response.sendRedirect("/Jboard1/user/login.jsp");	
-		return; // 아래 로직실행을 못하게 
+		return; // 아래 로직실행을 못하게 만듦
  	}
 	
 	request.setCharacterEncoding("utf-8");
