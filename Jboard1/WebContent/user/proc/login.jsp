@@ -55,5 +55,4 @@
 	stmt.close();
 	conn.close();
 	
-	// 리다이렉트
 %>

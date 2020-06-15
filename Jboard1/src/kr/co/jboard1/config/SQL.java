@@ -2,8 +2,8 @@ package kr.co.jboard1.config;
 
 public class SQL {
 	
-	// È¸¿ø°ü·Ã
-	// °Ô½Ã¹°°ü·Ã - Å¬·¡½º¿¡¼­´Â JSP¿Í ´Ù¸£°Ô ³»¿ë ´Ù¸£°Ô ¾´´Ù
+	// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ - Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ JSPï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public final static String SELECT_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `JBOARD_ARTICLE` WHERE `parent`=0";
 	
 	public final static String UPDATE_ARTICLE = "UPDATE `JBOARD_ARTICLE` SET `title`=?, `content`=? "
@@ -22,14 +22,21 @@ public class SQL {
 												+ "ORDER BY `seq` DESC "
 												+ "LIMIT ?, 10";
 												
-			
+	public final static String SELECT_ARTICLE_MAX_SEQ = "SELECT MAX(`seq`) FROM `JBOARD_ARTICLE`";
 	
 	public final static String INSERT_ARTICLE = "INSERT INTO `JBOARD_ARTICLE` SET "
 													+ "`title`=?, "
 													+ "`content`=?, "
+													+ "`file`=?, "
 													+ "`uid`=?, "
 													+ "`regip`=?, "
 													+ "`rdate`=NOW()";
+	
+	public final static String INSERT_FILE = "INSERT INTO `JBOARD_FILE` SET "
+											 + "`parent`=?, "
+											 + "`oldName`=?, "
+											 + "`newName`=?, "
+											 + "`rdate`=NOW()";
 	
 	public final static String SELECT_COMMENTS = "SELECT a.*, b.nick FROM `JBOARD_ARTICLE` AS a "
 												+ "JOIN `JBOARD_MEMBER` AS b "
@@ -44,7 +51,12 @@ public class SQL {
 												+ "`regip`=?, "
 												+ "`rdate`=NOW()";
 	
+	public final static String DELETE_COMMENT = "DELETE FROM `JBOARD_ARTICLE` WHERE `seq`=?";
+	
 	public final static String UPDATE_COMMENT_COUNT = "UPDATE `JBOARD_ARTICLE` SET `comment`= `comment` + 1 "
+													+ "WHERE `seq`=?";
+	
+	public final static String DELETE_COMMENT_COUNT = "UPDATE `JBOARD_ARTICLE` SET `comment`= `comment` - 1 "
 													+ "WHERE `seq`=?";
 		   
 

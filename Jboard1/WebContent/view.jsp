@@ -17,7 +17,6 @@
 		return; // 아래 로직실행을 못하게 만듦
  	}
 	
-
 	
 	request.setCharacterEncoding("utf-8");
 	String seq = request.getParameter("seq");
@@ -106,7 +105,7 @@
                 <tr>
                     <td>첨부파일</td>
                     <td>
-                        <a href="#">2020년 상반기 매출자료.xls</a>
+                        <a href="/Jboard1/download.jsp"><%= article.get() %></a>
                         <span>7회 다운로드</span>
                     </td>
                 </tr>
@@ -156,7 +155,7 @@
                     </span>
                     <textarea name="comment" readonly><%= comment.getContent() %></textarea>
                     <div>
-                        <a href="/Jboard1/proc/deleteComment.jsp?seq=<%= comment.getSeq() %>">삭제</a>
+                        <a href="/Jboard1/proc/deleteComment.jsp?seq=<%= comment.getSeq() %>&parent=<%= article.getSeq() %>">삭제</a>
                         <a href="#">수정</a>
                     </div>
                 </article>

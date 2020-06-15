@@ -5,10 +5,10 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	// 파라미터 수신
-	request.getParameter("utf-8");
+	request.setCharacterEncoding("utf-8");
 
 	String parent = request.getParameter("parent");
-	String uid = request.getParameter("comment");
+	String uid = request.getParameter("uid");
 	String comment = request.getParameter("comment");
 	String regip   = request.getRemoteAddr();
 	
