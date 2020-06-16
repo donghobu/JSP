@@ -40,7 +40,10 @@
 	int hasFile = (fname != null) ? 1 : 0;
 	
 	// 1,2단계
-		Connection conn = DBConfig.getConnection();
+	Connection conn = DBConfig.getConnection();
+	
+	// 트랜젝션 시작(begin)
+	conn.setAutoCommit(false);
 	
 	// 3단계
 		PreparedStatement psmt = conn.prepareStatement(SQL.INSERT_ARTICLE);
@@ -96,10 +99,14 @@
 		psmtFile.executeUpdate();
 		psmtFile.close();
 		
+		// 트랜젝션 끝(실질적인 쿼리 실행)
+		conn.commit();
+		
 		//5단계
 		//6단계
 		
 	}
+	//트랜젝션 종료
 	
 	// 6단계
 	psmt.close();

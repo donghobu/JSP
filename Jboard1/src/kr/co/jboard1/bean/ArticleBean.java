@@ -14,8 +14,17 @@ public class ArticleBean {
 	private String regip;
 	private String rdate;
 	
-	//Ãß°¡ÇÊµå
+	//ì¶”ê°€ í•„ë“œ
 	private String nick;
+	private FileBean fileBean;
+	
+	public FileBean getFileBean() {
+		return fileBean;
+	}
+	public void setFileBean(FileBean fileBean) {
+		this.fileBean = fileBean;
+	}
+	
 	public String getNick() {
 		return nick;
 	}
