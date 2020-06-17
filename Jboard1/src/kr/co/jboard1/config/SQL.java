@@ -2,8 +2,11 @@ package kr.co.jboard1.config;
 
 public class SQL {
 	
+	//회원관리
+	public final static String SELECT_CHECK_UID = "SELECT COUNT(`uid`) FROM `JBOARD_MEMBER` WHERE `uid`=?";
+	
 	// ȸ������
-	// �Խù����� - Ŭ���������� JSP�� �ٸ��� ���� �ٸ��� ����
+	// 게시물 관련
 	public final static String SELECT_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `JBOARD_ARTICLE` WHERE `parent`=0";
 	
 	public final static String UPDATE_ARTICLE = "UPDATE `JBOARD_ARTICLE` SET `title`=?, `content`=? "
