@@ -4,6 +4,7 @@ public class SQL {
 	
 	//회원관리
 	public final static String SELECT_CHECK_UID = "SELECT COUNT(`uid`) FROM `JBOARD_MEMBER` WHERE `uid`=?";
+	public final static String SELECT_CHECK_NICK = "SELECT COUNT(`nick`) FROM `JBOARD_MEMBER` WHERE `nick`=?";
 	
 	// ȸ������
 	// 게시물 관련
