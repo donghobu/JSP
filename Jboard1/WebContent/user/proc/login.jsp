@@ -1,5 +1,5 @@
-<%@page import="kr.co.jboard1.config.DBConfig"%>
 <%@page import="kr.co.jboard1.bean.MemberBean"%>
+<%@page import="kr.co.jboard1.config.DBConfig"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>

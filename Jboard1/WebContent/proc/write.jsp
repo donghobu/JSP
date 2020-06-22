@@ -1,3 +1,6 @@
+<%@page import="kr.co.jboard1.config.SQL"%>
+<%@page import="kr.co.jboard1.config.DBConfig"%>
+<%@page import="kr.co.jboard1.bean.MemberBean"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.io.File"%>
@@ -5,10 +8,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
-<%@page import="kr.co.jboard1.bean.MemberBean"%>
-<%@page import="kr.co.jboard1.config.SQL"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="kr.co.jboard1.config.DBConfig"%>
 <%@page import="java.sql.Connection"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%

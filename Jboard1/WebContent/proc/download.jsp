@@ -1,14 +1,14 @@
+<%@page import="kr.co.jboard1.config.SQL"%>
+<%@page import="kr.co.jboard1.config.DBConfig"%>
+<%@page import="kr.co.jboard1.bean.FileBean"%>
 <%@page import="java.io.FileNotFoundException"%>
 <%@page import="java.io.FileInputStream"%>
 <%@page import="java.io.BufferedOutputStream"%>
-<%@page import="kr.co.jboard1.bean.FileBean"%>
 <%@page import="java.io.File"%>
 <%@page import="java.io.BufferedInputStream"%>
 <%@page import="java.net.URLEncoder"%>
-<%@page import="kr.co.jboard1.config.SQL"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="kr.co.jboard1.config.DBConfig"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 

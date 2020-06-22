@@ -1,13 +1,13 @@
 <%@page import="kr.co.jboard1.bean.FileBean"%>
+<%@page import="kr.co.jboard1.bean.ArticleBean"%>
+<%@page import="kr.co.jboard1.config.SQL"%>
+<%@page import="kr.co.jboard1.config.DBConfig"%>
+<%@page import="kr.co.jboard1.bean.MemberBean"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="kr.co.jboard1.bean.ArticleBean"%>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="kr.co.jboard1.config.SQL"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="kr.co.jboard1.config.DBConfig"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="kr.co.jboard1.bean.MemberBean"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	// 세션체크 및  사용자 정보객체 구하기
