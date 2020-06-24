@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="./_header.jsp" %>
+<%@ include file="../_header.jsp" %>
 
         <div id="sub" class="market">
             <div>
@@ -8,27 +8,27 @@
             </div>
             <section>
                 <aside>
-                    <img src="../img/sub_aside_cate2_tit.png" alt="Àåº¸±â"/>
+                    <img src="../img/sub_aside_cate2_tit.png" alt="ï¿½åº¸ï¿½ï¿½"/>
                     <ul>
-                        <li class="on"><a href="#">Àåº¸±â</a></li>
+                        <li class="on"><a href="#">ï¿½åº¸ï¿½ï¿½</a></li>
                     </ul>
                 </aside>
                 <article>
                     <nav>
-                        <img src="../img/sub_nav_tit_cate2_tit1.png" alt="Àåº¸±â"/>
+                        <img src="../img/sub_nav_tit_cate2_tit1.png" alt="ï¿½åº¸ï¿½ï¿½"/>
                         <p>
-                            HOME > Àåº¸±â > <span>Àåº¸±â</span>
+                            HOME > ï¿½åº¸ï¿½ï¿½ > <span>ï¿½åº¸ï¿½ï¿½</span>
                         </p>
                     </nav>
                     <div class="content">
-                        <!-- ÄÁÅÙÃ÷ ³»¿ë ½ÃÀÛ -->
-                        // ÄÁÅÙÃ÷ ³»¿ë ÀÔ·ÂÇÏ¼¼¿ä.
+                        <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -->
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.
 
-                        <!-- ÄÁÅÙÃ÷ ³»¿ë ³¡ -->
+                        <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ -->
                     </div>
 
                 </article>
             </section>
         </div>
 
-<%@ include file="./_footer.jsp" %>
+<%@ include file="../_footer.jsp" %>

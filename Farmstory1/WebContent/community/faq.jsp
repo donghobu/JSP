@@ -1,38 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../_header.jsp" %>
+<div id="sub" class="community">
+    <div>
+        <img src="../img/sub_top_tit5.png" alt="COMMUNITY"/>
+    </div>
+    <section>
+        <aside>
+            <img src="../img/sub_aside_cate5_tit.png" alt="Л╩╓К╝╓К▀┬М▀╟"/>
+            <ul>
+                <li><a href="./notice.jsp">ЙЁ╣Л╖─Л┌╛М∙╜</a></li>
+                <li><a href="./menu.jsp">Л≤╓К┼≤Л²≤Л▀²К▀╗</a></li>
+                <li><a href="./chef.jsp">К┌≤К▐└Л ■К╕╛Л┌╛</a></li>
+                <li><a href="./qna.jsp">ЙЁ═Й╟²К╛╦Л²≤</a></li>
+                <li class="on"><a href="./faq.jsp">Л·░Лё╪К╛╩К┼■Л╖┬К╛╦</a></li>
+            </ul>
+        </aside>
+        <article>
+            <nav>
+                <img src="../img/sub_nav_tit_cate5_tit5.png" alt="Л·░Лё╪К╛╩К┼■Л╖┬К╛╦"/>
+                <p>
+                    HOME > Л╩╓К╝╓К▀┬М▀╟ > <span>Л·░Лё╪К╛╩К┼■Л╖┬К╛╦</span>
+                </p>
+            </nav>
+            <div class="content">
+                <!-- Л╩╗М┘░Л╦═ К┌╢Л ╘ Л▀°Л·▒ -->
+                // Л╩╗М┘░Л╦═ К┌╢Л ╘ Л·┘К═╔М∙≤Л└╦Л ■.
 
-<%@ include file="./_header.jsp" %>
-
-        <div id="sub" class="community">
-            <div>
-                <img src="../img/sub_top_tit5.png" alt="COMMUNITY"/>
+                <!-- Л╩╗М┘░Л╦═ К┌╢Л ╘ К│² -->
             </div>
-            <section>
-                <aside>
-                    <img src="../img/sub_aside_cate5_tit.png" alt="д©╧б╢оф╪"/>
-                    <ul>
-                        <li><a href="#">╟ЬаЖ╩Ггв</a></li>
-                        <li><a href="#">©ю╢цюг╫д╢э</a></li>
-                        <li><a href="#">Ё╙╣╣©Д╦╝╩Г</a></li>
-                        <li><a href="#">╟М╟╢╧╝юг</a></li>
-                        <li class="on"><a href="#">юзаж╧╞╢баЗ╧╝</a></li>
-                    </ul>
-                </aside>
-                <article>
-                    <nav>
-                        <img src="../img/sub_nav_tit_cate5_tit5.png" alt="юзаж╧╞╢баЗ╧╝"/>
-                        <p>
-                            HOME > д©╧б╢оф╪ > <span>юзаж╧╞╢баЗ╧╝</span>
-                        </p>
-                    </nav>
-                    <div class="content">
-                        <!-- даеыцВ Ё╩©К ╫цюш -->
-                        // даеыцВ Ё╩©К ют╥бго╪╪©Д.
 
-                        <!-- даеыцВ Ё╩©К Ё║ -->
-                    </div>
-
-                </article>
-            </section>
-        </div>
-
-<%@ include file="./_footer.jsp" %>
+        </article>
+    </section>
+</div>
+<%@ include file="../_footer.jsp" %>

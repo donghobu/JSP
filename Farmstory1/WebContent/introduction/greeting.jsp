@@ -1,35 +1,32 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../_header.jsp" %>
+<div id="sub" class="introduction">
+    <div>
+        <img src="../img/sub_top_tit1.png" alt="INTRODUCTION"/>
+    </div>
+    <section>
+        <aside>
+            <img src="../img/sub_aside_cate1_tit.png" alt="ÌåúÏä§ÌÜ†Î¶¨ ÏÜåÍ∞ú"/>
+            <ul>
+                <li class="on"><a href="/Farmstory1/introduction/greeting.jsp">Ïù∏ÏÇ¨Îßê</a></li>
+                <li><a href="/Farmstory1/introduction/direction.jsp">Ï∞æÏïÑÏò§ÏãúÎäîÍ∏∏</a></li>
+            </ul>
+        </aside>
+        <article>
+            <nav>
+                <img src="../img/sub_nav_tit_cate1_tit1.png" alt="Ïù∏ÏÇ¨Îßê"/>
+                <p>
+                    HOME > ÌåúÏä§ÌÜ†Î¶¨ÏÜåÍ∞ú > <span>Ïù∏ÏÇ¨Îßê</span>
+                </p>
+            </nav>
+            <div class="content">
+                <!-- Ïª®ÌÖêÏ∏† ÎÇ¥Ïö© ÏãúÏûë -->
+                // Ïª®ÌÖêÏ∏† ÎÇ¥Ïö© ÏûÖÎ†•ÌïòÏÑ∏Ïöî.
 
-<%@ include file="./_header.jsp" %>
-
-        <div id="sub" class="introduction">
-            <div>
-                <img src="../img/sub_top_tit1.png" alt="INTRODUCTION"/>
+                <!-- Ïª®ÌÖêÏ∏† ÎÇ¥Ïö© ÎÅù -->
             </div>
-            <section>
-                <aside>
-                    <img src="../img/sub_aside_cate1_tit.png" alt="∆ Ω∫≈‰∏Æ º“∞≥"/>
-                    <ul>
-                        <li class="on"><a href="#">¿ŒªÁ∏ª</a></li>
-                        <li><a href="#">√£æ∆ø¿Ω√¥¬±Ê</a></li>
-                    </ul>
-                </aside>
-                <article>
-                    <nav>
-                        <img src="../img/sub_nav_tit_cate1_tit1.png" alt="¿ŒªÁ∏ª"/>
-                        <p>
-                            HOME > ∆ Ω∫≈‰∏Æº“∞≥ > <span>¿ŒªÁ∏ª</span>
-                        </p>
-                    </nav>
-                    <div class="content">
-                        <!-- ƒ¡≈Ÿ√˜ ≥ªøÎ Ω√¿€ -->
-                        // ƒ¡≈Ÿ√˜ ≥ªøÎ ¿‘∑¬«œººø‰.
 
-                        <!-- ƒ¡≈Ÿ√˜ ≥ªøÎ ≥° -->
-                    </div>
-
-                </article>
-            </section>
-        </div>
-
-<%@ include file="./_footer.jsp" %>       
+        </article>
+    </section>
+</div>
+<%@ include file="../_footer.jsp" %>
