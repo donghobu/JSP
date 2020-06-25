@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="./_header.jsp" %>
+<%@ include file="../_header.jsp" %>
 
         <div id="sub" class="croptalk">
             <div>
@@ -8,29 +8,29 @@
             </div>
             <section>
                 <aside>
-                    <img src="../img/sub_aside_cate3_tit.png" alt="³óÀÛ¹°ÀÌ¾ß±â"/>
+                    <img src="../img/sub_aside_cate3_tit.png" alt="ï¿½ï¿½ï¿½Û¹ï¿½ï¿½Ì¾ß±ï¿½"/>
                     <ul>
-                        <li><a href="#">³óÀÛ¹°ÀÌ¾ß±â</a></li>
-                        <li class="on"><a href="#">ÅÔ¹ç°¡²Ù±â</a></li>
-                        <li><a href="#">±Í³óÇÐ±³</a></li>
+                        <li><a href="#">ï¿½ï¿½ï¿½Û¹ï¿½ï¿½Ì¾ß±ï¿½</a></li>
+                        <li class="on"><a href="#">ï¿½Ô¹ç°¡ï¿½Ù±ï¿½</a></li>
+                        <li><a href="#">ï¿½Í³ï¿½ï¿½Ð±ï¿½</a></li>
                     </ul>
                 </aside>
                 <article>
                     <nav>
-                        <img src="../img/sub_nav_tit_cate3_tit2.png" alt="ÅÔ¹ç°¡²Ù±â"/>
+                        <img src="../img/sub_nav_tit_cate3_tit2.png" alt="ï¿½Ô¹ç°¡ï¿½Ù±ï¿½"/>
                         <p>
-                            HOME > ³óÀÛ¹°ÀÌ¾ß±â > <span>ÅÔ¹ç°¡²Ù±â</span>
+                            HOME > ï¿½ï¿½ï¿½Û¹ï¿½ï¿½Ì¾ß±ï¿½ > <span>ï¿½Ô¹ç°¡ï¿½Ù±ï¿½</span>
                         </p>
                     </nav>
                     <div class="content">
-                        <!-- ÄÁÅÙÃ÷ ³»¿ë ½ÃÀÛ -->
-                        // ÄÁÅÙÃ÷ ³»¿ë ÀÔ·ÂÇÏ¼¼¿ä.
+                        <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -->
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.
 
-                        <!-- ÄÁÅÙÃ÷ ³»¿ë ³¡ -->
+                        <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ -->
                     </div>
 
                 </article>
             </section>
         </div>
 
-<%@ include file="./_footer.jsp" %>
+<%@ include file="../_footer.jsp" %>

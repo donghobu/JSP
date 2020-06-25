@@ -1,5 +1,5 @@
-<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="kr.co.farmstory1.bean.FileBean"%>
 <%@page import="kr.co.farmstory1.bean.ArticleBean"%>
 <%@page import="java.sql.ResultSet"%>
@@ -11,36 +11,30 @@
 <%@ include file="../_header.jsp" %>
 <%
 	request.setCharacterEncoding("utf-8");
-	String group = request.getParameter("group");
-	String cate  = request.getParameter("cate");
-	String seq  = request.getParameter("seq");
-	String download  = request.getParameter("download");
-	String asideFile  = "./_aside_"+group+".jsp";	
+	String group    = request.getParameter("group");
+	String cate     = request.getParameter("cate");
+	String seq      = request.getParameter("seq");
+	String download = request.getParameter("download");
+	String asideFile  = "./_aside_"+group+".jsp";
 	
-	if(mb == null){
-		response.sendRedirect("./list.jsp?group="+group+"&cate="+cate);
+	if(mb == null){		
+		response.sendRedirect("./list.jsp?code=101&group="+group+"&cate="+cate);
 		return;
 	}
-
-	request.setCharacterEncoding("utf-8");
-	String seqString = request.getParameter("seq");
-	String downloadString = request.getParameter("download");
-	
 	// 1, 2단계
 	Connection conn = DBConfig.getConnection();
-	
 	// 트랜젝션 시작
 	conn.setAutoCommit(false);
 	
 	// 3단계
 	PreparedStatement psmtHit = conn.prepareStatement(SQL.UPDATE_HIT);
-	psmtHit.setString(1,seq);
+	psmtHit.setString(1, seq);
 	
 	PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_ARTICLE);
-	psmt.setString(1,seq);
+	psmt.setString(1, seq);
 	
 	PreparedStatement psmtComment = conn.prepareStatement(SQL.SELECT_COMMENTS);
-	psmtComment.setString(1,seq);
+	psmtComment.setString(1, seq);
 	
 	// 4단계
 	psmtHit.executeUpdate();
@@ -51,8 +45,7 @@
 	ArticleBean article = new ArticleBean();
 	FileBean fileBean = new FileBean();
 	
-	
-	if(rs.next()){
+	if(rs.next()){		
 		article.setSeq(rs.getInt(1));
 		article.setParent(rs.getInt(2));
 		article.setComment(rs.getInt(3));
@@ -70,13 +63,11 @@
 		fileBean.setOldName(rs.getString(14));
 		fileBean.setNewName(rs.getString(15));
 		fileBean.setDownload(rs.getInt(16));
-		fileBean.setRdate(rs.getString(17));
+		fileBean.setRdate(rs.getString(17));		
 		article.setFileBean(fileBean);
-
 	}
-	
+			
 	List<ArticleBean> comments = new ArrayList<>();
-	
 	while(rsComment.next()){
 		ArticleBean comment = new ArticleBean();
 		
@@ -87,8 +78,7 @@
 		comment.setRdate(rsComment.getString(11));
 		comment.setNick(rsComment.getString(12));
 		
-		comments.add(comment);
-		
+		comments.add(comment);		
 	}
 	
 	// 트랜젝션 끝
@@ -98,10 +88,10 @@
 	rsComment.close();
 	psmtComment.close();
 	psmtHit.close();
-	rs.close();
+	rs.close();	
 	psmt.close();
 	conn.close();
-
+	
 	// 수정을 대비하기 위한 article객체 세션에 저장
 	session.setAttribute("article", article);
 %>
@@ -113,7 +103,15 @@
 	if(download == 'fail'){
 		alert('해당하는 파일이 없습니다.\n관리자에게 문의하시기 바랍니다.');
 	}
+	
+	$(document).ready(function() {
+		$('#summernote').summernote({
+			airMode: true,
+			focus: false
+		});
+	});
 </script>
+
 <section id="board" class="view">
     <h3>글보기</h3>
     <table>
@@ -133,7 +131,7 @@
         <tr>
             <td>내용</td>
             <td>
-                <textarea name="content" readonly><%= article.getContent() %></textarea>
+                <textarea id="summernote" name="content" readonly><%= article.getContent() %></textarea>
             </td>
         </tr>
     </table>
@@ -162,7 +160,6 @@
             <span>
                 <span><%= comment.getNick() %></span>
                 <span><%= comment.getRdate().substring(2, 10) %></span>
-                <span>20-06-23</span>
             </span>
             <textarea name="comment" readonly><%= comment.getContent() %></textarea>
             <div>
@@ -172,15 +169,15 @@
         </article>
         <% } %>
         
-        <% if(article.getComment() == 0){ %>
-       	<p class="empty">등록된 댓글이 없습니다.</p>
+        <% if(article.getComment() == 0){ %>	
+       		<p class="empty">등록된 댓글이 없습니다.</p>
        	<% } %>
     </section>
 
     <!-- 댓글입력폼 -->
     <section class="commentForm">
         <h3>댓글쓰기</h3>
-        <form action="#" method="post">
+        <form action="./proc/comment.jsp" method="post">
         	<input type="hidden" name="parent" value="<%= seq %>" />
         	<input type="hidden" name="group" value="<%= group %>" />
         	<input type="hidden" name="cate" value="<%= cate %>" />
