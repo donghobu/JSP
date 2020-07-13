@@ -1,0 +1,18 @@
+<%@ page contentType="text/html; charset=UTF-8"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>11-2</title>
+</head>
+<body>
+	<h3>2.표현언어 기본 내장객체</h3>
+	<% 
+	pageContext.setAttribute("name", "김유신");
+	request.setAttribute("name","김춘추");ㅣ
+	session.setAttribute("name","장보고");ㅣ
+	application.setAttribute("name","이순신");ㅣ
+	%>
+</body>
+</html>

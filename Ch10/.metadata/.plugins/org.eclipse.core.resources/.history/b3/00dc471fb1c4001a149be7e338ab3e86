@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>12-1</title>
+</head>
+<body>
+	<h3>1.JSTL(Java Standards Tag Library) 기본</h3>
+	<h4>Scriptlet 표현</h4>
+	<%
+		String str = "Hello";
+		out.println("<p>str : "+str+"</p>");
+		
+		int num1 = 1;
+		int num2 = 2;
+		int num3 = 3;
+		
+		if(num1 < num2){
+			out.println("<p>num1이 num2보다 작다.</p>");
+		}
+		
+		if(num1 > num2){
+			out.println("<p>num1이 num2보다 크다.</p>");
+		}else{
+			out.println("<p>num1이 num2보다 작다.</p>");
+		}
+	%>
+	
+	<h4>JSTL 표현</h4>
+	<c:set var="str" value="Hello" />
+	<p>str : ${str}</p>
+	
+	<c:set var="num1" value="1" />
+	<c:set var="num2" value="2" />
+	<c:set var="num3" value="3" />
+	
+	<c:if test="${num1 lt num2}">
+		<p>num1이 num2보다 작다.</p>
+	
+	</c:if>
+
+	<c:choose>
+		<c:when test=""></c:when>
+		<c:otherwise></c:otherwise>
+	</c:choose>
+</body>
+</html>

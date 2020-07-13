@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>11-3</title>
+</head>
+<body>
+	<h3>3. 표현언어 연산자</h3>
+	<%
+		String str1 = null;
+		String str2 = "";
+	%>
+
+</body>
+</html>

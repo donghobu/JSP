@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>12-1</title>
+</head>
+<body>
+	<h3>1.JSTL(Java Standards Tag Library) 기본</h3>
+	<%
+		String str = "Hello";
+		out.println("<p>str : "+str+"</p>");
+	%>
+	
+	<h4>JSTL 표현</h4>
+	<c:set var="str" value="Hello"/>
+
+</body>
+</html>
